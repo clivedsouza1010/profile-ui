@@ -1,9 +1,21 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-import './index.css';
+import {render} from 'react-dom';
+import Main from './js/main';
+import MyWork from './js/mywork';
+import './css/index.css';
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-);
+/*ReactDOM.render(
+  <Main />,
+  document.getElementById('main')
+);*/
+
+
+import { Router, Route, hashHistory } from 'react-router'
+
+render((
+    <Router history={hashHistory}>
+        <Route path="/" component={Main}/>
+        <Route path="/home" component={Main}/>
+        <Route path="/mywork" component={MyWork}/>
+    </Router>
+), document.getElementById('main'));
