@@ -35,13 +35,11 @@ class EducationContainer extends Component {
                 <p>Graduated in Summer 2009 with a 3.25 GPA. Specialized in
                   Systems, Algorithms and Networks.</p>
               </div>
-              <!--close content_container-->
               <div className="content_container">
                 <h3>BE in Information Technology, Fr. Agnels, Vashi, Mumbai</h3>
                 <p>Graduated in Summer 2006 with 61.27 percentage aggregate
                   marks (3.5 GPA)</p>
               </div>
-              <!--close content_container-->
               <div className="content_container">
                 <h3>Certifications</h3>
                 <p>
@@ -54,9 +52,7 @@ class EducationContainer extends Component {
                   </ul>
                 </p>
               </div>
-              <!--close content_container-->
             </div>
-            <!--close content_item-->
           </div>
         </div>
         <Footer />
