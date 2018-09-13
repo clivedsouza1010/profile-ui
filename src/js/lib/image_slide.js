@@ -1,26 +1,22 @@
-$(document).ready(function() {    
-  
-  // execute the slideShow, set 4 seconds (4000) for each image
-  slideShow(10000);
+/*
 
-});
-
-function slideShow(speed) {
+export default function slideShow(speed) {
 
   // append an 'li' item to the 'ul' list for displaying the caption
-  $('ul.slideshow').append('<li id="slideshow-caption" class="caption"><div class="slideshow-caption-container"><p></p></div></li>');
+    document.querySelector('ul.slideshow').append('<li id="slideshow-caption" class="caption"><div class="slideshow-caption-container"><p></p></div></li>');
 
   // set the opacity of all images to 0
-  $('ul.slideshow li').css({opacity: 0.0});
+    document.querySelector('ul.slideshow li').style.opacity = 0.0;
   
   // get the first image and display it
-  $('ul.slideshow li:first').css({opacity: 1.0}).addClass('show');
+    document.querySelector('ul.slideshow li:first').style.opacity = 1.0;
+    document.querySelector('ul.slideshow li:first').addClass('show');
   
   // get the caption of the first image from the 'rel' attribute and display it
-  $('#slideshow-caption p').html($('ul.slideshow li.show').find('img').attr('alt'));
+    document.querySelector('#slideshow-caption p').html(document.querySelector('ul.slideshow li.show').find('img').attr('alt'));
     
   // display the caption
-  $('#slideshow-caption').css({opacity: 0.6, bottom:0});
+    document.querySelector('#slideshow-caption').css({opacity: 0.6, bottom:0});
   
   // call the gallery function to run the slideshow  
   var timer = setInterval('gallery()',speed);
@@ -64,3 +60,4 @@ function gallery() {
 
   }
 }
+*/

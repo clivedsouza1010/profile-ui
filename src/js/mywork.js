@@ -9,7 +9,7 @@ import SlideShow from './common/slideshow';
 import Footer from './common/footer';
 import '../css/index.css';
 
-class MyWork extends Component {
+class MyWorkContainer extends Component {
     render() {
         return (
             <div>
@@ -111,4 +111,4 @@ class MyWork extends Component {
     }
 }
 
-export default MyWork;
+export default MyWorkContainer;
