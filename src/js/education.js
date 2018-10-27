@@ -1,7 +1,3 @@
-/**
- * Created by clive on 12/11/16.
- */
-
 import React, {Component} from 'react';
 import Header from './common/header';
 import SideBar from './common/sidebar';
