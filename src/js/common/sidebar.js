@@ -1,40 +1,45 @@
-/**
- * Created by clive on 12/11/16.
- */
+import React from 'react';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import ListSubheader from '@material-ui/core/ListSubheader';
+import HomeIcon from '@material-ui/icons/Home';
+import WorkIcon from '@material-ui/icons/Work';
+import SchoolIcon from '@material-ui/icons/School';
+import AmpStoriesIcon from '@material-ui/icons/AmpStories';
+import ContactMailIcon from '@material-ui/icons/ContactMail';
 
-import React, { Component } from 'react';
-
-class SideBar extends Component {
-    render() {
-        return (
-            <div className="sidebar_container">
-                <div className="sidebar">
-                    <div className="sidebar_item">
-                        <h2>Feedback</h2>
-                        <p>Welcome to my personal web site. Please have a look around, any
-                            feedback is much appreciated.</p>
-                    </div>
-                </div>
-                <div className="sidebar">
-                    <div className="sidebar_item">
-                        <h2>Latest Update</h2>
-                        <h3>August 2014</h3>
-                        <p>Working on my personal web site.</p>
-                    </div>
-                </div>
-
-                <div className="sidebar">
-                    <div className="sidebar_item">
-                        <h2>Contact</h2>
-                        <p>Phone: +91 (0)1234 567891</p>
-                        <p>
-                            Email: <a href="mailto:clive.dsouza1010@gmail.com">clive.dsouza1010@gmail.com</a>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        );
-    }
-}
-
-export default SideBar;
+export const sideBarItems = (
+  <div>
+    <ListItem button>
+      <ListItemIcon>
+        <HomeIcon />
+      </ListItemIcon>
+      <ListItemText primary="Home" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <WorkIcon />
+      </ListItemIcon>
+      <ListItemText primary="Work Experience" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <SchoolIcon />
+      </ListItemIcon>
+      <ListItemText primary="Education" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <AmpStoriesIcon />
+      </ListItemIcon>
+      <ListItemText primary="Projects" />
+    </ListItem>
+    <ListItem button>
+      <ListItemIcon>
+        <ContactMailIcon />
+      </ListItemIcon>
+      <ListItemText primary="Contact" />
+    </ListItem>
+  </div>
+);

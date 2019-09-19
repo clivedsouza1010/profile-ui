@@ -1,18 +1,16 @@
 import React from 'react';
-import {render} from 'react-dom';
+import { render } from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.css';
 import Main from './js/main';
-import MyWorkContainer from './js/mywork';
-import EducationContainer from './js/education';
-import ProjectsContainer from './js/projects';
-import './css/index.css';
-import { Router, Route, hashHistory } from 'react-router'
+// import MyWorkContainer from './js/mywork';
+// import EducationContainer from './js/education';
+// import ProjectsContainer from './js/projects';
+// import './css/index.css';
+import { Route, HashRouter } from 'react-router-dom'
 
 render((
-    <Router history={hashHistory}>
-      <Route path="/" component={Main}/>
-      <Route path="/home" component={Main}/>
-      <Route path="/mywork" component={MyWorkContainer}/>
-      <Route path="/education" component={EducationContainer}/>
-      <Route path="/projects" component={ProjectsContainer}/>
-    </Router>
+  <HashRouter>
+    <Route path="/" component={Main}/>
+    <Route path="/home" component={Main}/>
+  </HashRouter>
 ), document.getElementById('main'));
