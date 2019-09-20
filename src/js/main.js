@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -18,6 +19,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import { sideBarItems } from './common/sidebar';
+import Home from './home';
+import Work from './work';
 import image1 from '../images/image1.jpg';
 
 function Copyright() {
@@ -50,6 +53,7 @@ const useStyles = makeStyles(theme => ({
     ...theme.mixins.toolbar,
   },
   appBar: {
+    backgroundColor: 'gray',
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
@@ -115,7 +119,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function Main() {
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const handleDrawerOpen = () => {
     setOpen(true);
   };
@@ -161,27 +165,8 @@ export default function Main() {
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-              <p>
-              <h3>Welcome</h3>
-                <p>This website is created in React.js</p>
-              </p>
-              <br />
-              <p>
-                <h4>Experience</h4>
-                Over 10 years of experience in developing JAVA/J2EE and Web
-                applications for Retail, BFSI, Healthcare as well as insurance
-                projects. My prime expertise has been in the development of large
-                enterprise applications and the usage of best development
-                practices. Currently working as a Lead Engineer developing Single Page Apps
-                using React, Redux, Material UI, LoopBack, Node.js.
-              </p>
-              <img src={image1} alt="image1"/>
-              </Paper>
-            </Grid>
-          </Grid>
+          <Route path="/home" component={Home}/>
+          <Route path="/work" component={Work}/>
         </Container>
         <Copyright />
       </main>

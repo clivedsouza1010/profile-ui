@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -11,31 +12,31 @@ import ContactMailIcon from '@material-ui/icons/ContactMail';
 
 export const sideBarItems = (
   <div>
-    <ListItem button>
+    <ListItem button component={Link} to="/home">
       <ListItemIcon>
         <HomeIcon />
       </ListItemIcon>
       <ListItemText primary="Home" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/work">
       <ListItemIcon>
         <WorkIcon />
       </ListItemIcon>
       <ListItemText primary="Work Experience" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/education">
       <ListItemIcon>
         <SchoolIcon />
       </ListItemIcon>
       <ListItemText primary="Education" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/projects">
       <ListItemIcon>
         <AmpStoriesIcon />
       </ListItemIcon>
       <ListItemText primary="Projects" />
     </ListItem>
-    <ListItem button>
+    <ListItem button component={Link} to="/contact">
       <ListItemIcon>
         <ContactMailIcon />
       </ListItemIcon>
