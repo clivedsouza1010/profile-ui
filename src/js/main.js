@@ -164,10 +164,16 @@ export default function Main() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
-          <Route path="/home" component={Home}/>
-          <Route path="/work" component={Work}/>
-        </Container>
+          {window.location.pathname === '/' ? (
+            <Container maxWidth="lg" className={classes.container}>
+            <Home/>
+            </Container>
+          ) : (
+            <Container maxWidth="lg" className={classes.container}>
+            <Route path="/home" component={Home}/>
+            <Route path="/work" component={Work}/>
+            </Container>
+          )}
         <Copyright />
       </main>
     </div>
