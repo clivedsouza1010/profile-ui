@@ -55,11 +55,6 @@ export default function CustomCard(props) {
             {avatar}
           </Avatar>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
         title={titleText}
         subheader={subHeaderText}
       />
@@ -69,12 +64,6 @@ export default function CustomCard(props) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
         <IconButton
           className={clsx(classes.expand, {
             [classes.expandOpen]: expanded,
