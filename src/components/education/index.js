@@ -8,6 +8,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    fontFamily: "'Montserrat', sans-serif",
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -17,22 +18,25 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2),
     overflow: 'auto',
     flexDirection: 'column',
+    background: 'rgba(236, 236, 236, 0.85)',
   },
   fixedHeight: {
     height: 'auto',
   },
   h2: {
-	   font: 'normal 165% Arial, Helvetica, sans-serif',
      color: '#5D5D5D',
   },
   h3: {
-    font: 'normal 130% Arial, Helvetica, sans-serif',
     color: '#5D5D5D',
   },
   p: {
 	  color: '#1D1D1D',
 	  textShadow: '1px 1px #FFF',
 	  fontSize: '100%',
+  },
+  gridCustom: {
+    maxWidth: '100%',
+    flexBasis: '100%',
   }
 }));
 
@@ -44,7 +48,7 @@ export default function Education() {
     <div className={classes.root}>
       <CssBaseline />
           <Grid container spacing={3}>
-            <Grid item xs={12} md={8} lg={9}>
+            <Grid item xs={12} md={8} lg={9} className={classes.gridCustom}>
               <Paper className={fixedHeightPaper}>
               <p>
               <h3>Education</h3>
