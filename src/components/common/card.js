@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 345,
+      fontFamily: "'Montserrat', sans-serif",
   },
   media: {
     height: 0,

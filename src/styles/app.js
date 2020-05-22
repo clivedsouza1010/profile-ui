@@ -1,3 +1,5 @@
+import Image from '../images/background.jpg';
+
 const drawerWidth = 240;
 
 const appStyles = (theme) => ({
@@ -64,6 +66,8 @@ const appStyles = (theme) => ({
     flexGrow: 1,
     height: '100vh',
     overflow: 'auto',
+    background: `url(${Image})`,
+    backgroundSize: 'cover'
   },
   container: {
     paddingTop: theme.spacing(4),
@@ -73,9 +77,6 @@ const appStyles = (theme) => ({
     padding: theme.spacing(2),
     overflow: 'auto',
     flexDirection: 'column',
-  },
-  fixedHeight: {
-    height: 440,
   },
 });
 

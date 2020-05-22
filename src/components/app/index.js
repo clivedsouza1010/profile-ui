@@ -33,8 +33,7 @@ export default function App() {
   };
 
   return (
-    <div className={classes.root}>
-      <CssBaseline />
+    <div className={classes.root} name="test">
       <AppBar position="absolute" className={clsx(classes.appBar, open && classes.appBarShift)}>
         <Toolbar className={classes.toolbar}>
           <IconButton
